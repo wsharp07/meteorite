@@ -10,4 +10,5 @@ template(name="homeIndex")
 			hr
 		div.container.marketing
 			div.row 
-				| {{#each featured}} {{> _productTile this}} {{/each}}
+				each featured
+					+_productTile this

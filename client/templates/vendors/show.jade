@@ -1,0 +1,18 @@
+template(name="vendorsShow")
+	div.container(style="padding-top:80px")
+		div.row
+			div.col-md-7
+				img(src="/images/vendors/{{slug}}.jpg",alt="")
+			div.col-md-5
+				h1 {{name}}
+				p.lead {{description}}
+		hr
+		div.row
+			each products
+				div.col-sm-6.col-md-4(style="min-height:420px")
+					a(href="{{pathFor 'productsShow'}}")
+						img(src="/images/products/{{image}}",alt="...")
+					div.caption
+						h3
+							a(href="{{pathFor 'productsShow'}}") {{name}}
+						p {{summary}}
