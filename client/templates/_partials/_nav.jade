@@ -16,3 +16,8 @@ template(name="_nav")
             a(href="{{pathFor 'homeAbout'}}") About
           li
             a(href="{{pathFor 'homeContact'}}") Contact
+        ul.nav.navbar-nav.navbar-right
+          li 
+            if isInRole 'Administrator'
+              a(href="") Admin
+          | {{> loginButtons }}
