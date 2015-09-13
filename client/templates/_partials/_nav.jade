@@ -16,6 +16,13 @@ template(name="_nav")
             a(href="{{pathFor 'homeAbout'}}") About
           li
             a(href="{{pathFor 'homeContact'}}") Contact
+          li.dropdown
+            a.dropdown-toggle(href="#",data-toggle="dropdown",role="button", aria-expanded="false") Suppliers
+              span.caret
+            ul.dropdown-menu(role="menu")
+              each vendors
+                li
+                  a(href="{{pathFor 'vendorsShow'}}") {{name}}
         ul.nav.navbar-nav.navbar-right
           li 
             if isInRole 'Administrator'
