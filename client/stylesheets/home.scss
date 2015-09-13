@@ -1,0 +1,28 @@
+// colors
+$color_grey: #ccc;
+$color_something: #7b9ed0;
+
+.cover{
+  color: rgb(255, 255, 255);
+  position: relative;
+  min-height: 680px;
+  padding-top:80px;
+  background: url("/images/splash/rocket-shop.jpg") no-repeat scroll 0px 100% / cover transparent;
+  border-bottom:9px solid $color_something;
+}
+
+.jumbotron{
+  background: none;
+  h1 {
+    font-size: 63px;
+    text-align: center;
+    margin: 0;
+  }
+  p.lead {
+    font-family:"Georgia";
+    text-align:center;
+    font-size:36px;
+    font-style:italic;
+    color: $color_grey;
+  }
+}

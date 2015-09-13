@@ -1,0 +1,33 @@
+//colors
+$color_white: #fff;
+
+//fonts
+$font-stack: sans-serif;
+
+body {
+	padding-top: 50px;
+}
+
+.error-template {
+	padding: 40px 15px;
+	text-align: 
+	center;
+}
+.error-actions {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.error-actions .btn { 
+	margin-right:10px; 
+}
+
+.loading-message {
+  color: $color_white;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: $font-stack;
+}
+
+.sk-spinner-rotating-plane.sk-spinner {
+  background-color: $color_white;
+}
