@@ -1,0 +1,23 @@
+template(name="_productTile")
+  div.col-sm-4
+    div.col-item
+      div.photo
+        img.img-responsive(src="/images/products/{{image}}",alt="a")
+      div.info
+        div.row
+          div.price.col-md-6
+            h5 {{name}}
+            h5.price-text-color {{money price}}
+          div.rating.hidden-sm.col-md-6
+            i.price-text-color.glyphicon.glyphicon-star
+            i.price-text-color.glyphicon.glyphicon-star
+            i.price-text-color.glyphicon.glyphicon-star
+            i.glyphicon.glyphicon-star
+        div.separator.clear-left
+          p.btn-add
+            i.glyphicon.glyphicon-shopping-cart
+            a.hidden-sm.add-to-cart(href="#") Add to cart
+          p.btn-details
+            i.glyphicon.glyphicon-list
+            a.hidden-sm(href="{{pathFor 'productsShow'}}") More details
+        div.clearfix

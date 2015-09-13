@@ -10,3 +10,4 @@ insecure
 twbs:bootstrap
 iron:router
 pcel:loading
+mquandalle:jade

@@ -1,0 +1,13 @@
+template(name="homeIndex")
+	div.cover
+		div.clearfix
+	div.container
+		div.row
+			div.col-md-12
+				div.jumbotron
+					h1 Wecome to Rocket Shop
+					p.lead To Mars With You!
+			hr
+		div.container.marketing
+			div.row 
+				| {{#each featured}} {{> _productTile this}} {{/each}}

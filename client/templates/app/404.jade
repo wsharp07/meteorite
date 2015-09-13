@@ -1,0 +1,15 @@
+template(name="notFound")
+    div.row
+        div.col-md-12
+            div.error-template
+                h1 Oops!
+                h2 404 Not Found
+                div.error-details
+                    | Sorry, an error has occured, Requested page not found!
+                div.error-actions
+                    a.btn.btn-primary.btn-lg(href=" {{ pathFor 'homeIndex'}} ")
+                        span.glyphicon.glyphicon-home
+                        | Take Me Home
+                    a.btn.btn-default.btn-lg(href=" {{ pathFor 'homeContact'}} ")
+                        span.glyphicon.glyphicon-envelope
+                        | Contact Support
