@@ -1,0 +1,43 @@
+template(name="cartShow")
+	div.container
+		div.row
+			div.col-xs-8
+				div.panel.panel-info
+					div.panel-heading
+						div.panel-title
+							div.row
+								div.col-xs-6
+									h5
+										span.glyphicon.glyphicon-shopping-cart
+										| Shopping Cart
+								div.col-xs-6
+									button.btn.btn-primary.btn-sm.btn-block
+										span.glyphicon.glyphicon-share-alt
+										| Continue shopping
+					div.panel-body
+						each cart.items
+							div.row
+								div.col-xs-2
+									img.img-responsive(src="/images/products/{{image}}")
+								div.col-xs-4
+									h4.product-name
+										| <strong>{{name}}</strong>
+									h4
+										| <small>{{description}}</small>
+								div.col-xs-6
+									div.col-xs-6.text-right
+										h6 <strong>{{money price}}</strong>
+											span.text-muted x
+									div.col-xs-4
+										input.form-control.input-sm.item-qty(type="text",value="{{quantity}}")
+									div.col-xs-2
+										a.btn.btn-link.btn-xs.remove-from-cart
+											span.glyphicon.glyphicon-trash
+					div.panel-footer
+						div.row.text-center
+							div.col-xs-9
+								h4.text-right
+									| Total <strong>{{money cart.total}}</strong>
+							div.col-xs-3
+								a.btn.btn-success.btn-block(href="{{pathFor 'checkoutShow'}}") 
+									| Checkout

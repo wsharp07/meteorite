@@ -1,0 +1,49 @@
+template(name="checkoutShow")
+	div#checkout-panel.container(style="padding-top:40px")
+		ol.breadcrumb
+			li
+				a(href="{{pathFor 'homeIndex'}}") Home
+			li
+				a(href="{{pathFor 'cartShow'}}") Shopping Cart
+			li.active Checkout
+		div.col-md-8
+			div#step-1.row
+				div.col-xs-12
+					div.col-md-12
+						h3 Name and Email
+						div.form-group
+							input.form-control(maxlength="100",type="text",placeholder="First and Last",data-bind="value:name")
+						div.form-group
+							input.form-control(maxlength="100",type="text",required="required",placeholder="Email",data-bind="value:email")
+			hr
+			div#step-2.row
+				div.col-xs-12
+					div.col-md-12
+						h3 Shipping Address
+						+addressInput address
+			hr
+			div.radio
+				label
+					input(type="radio",name="processor",value="paypal",data-bind="checked:payment_type")
+					img(src="/images/paypal.png",alt="")
+			div.radio(style="margin-top24px")
+				label
+					input(type="radio",name="processor",value="cc",data-bind="checked:payment_type")
+					img(src="/images/cc_payment.jpg",alt="")
+			hr
+			div.row
+				div.col-md-12
+					h3 Terms and Conditions
+					div.checkbox
+						label
+							input(type="checkbox",data-bind="checked:terms_accepted")
+							| I agree to 
+							a(href="#") Terms and Conditions
+					div.row
+						div.col-md-12
+							a.btn.btn-default(href="#",data-bind="visible: !paymentReady()", disabled="disabled")
+								| Pay Now
+							a#checkout.btn.btn-info(href="#",data-bind="visible:paymentReady")
+								| Pay Now
+		div.col-md-4(style="margin-top24px")
+			+miniCart cart

@@ -1,5 +1,5 @@
-Template.productsShow.events({
-	"click #add-to-cart": function(ev){
+Template._productTile.events({
+	"click .add-to-cart": function(ev){
 		ev.preventDefault();
 		addToCart(this.sku, function(err,res){
 			Router.go("cartShow");

@@ -1,0 +1,28 @@
+template(name="miniCart")
+	.panel.panel-info
+		.panel-heading
+			.panel-title
+				.row
+					.col-xs-12
+						h5
+							span.glyphicon.glyphicon-shopping-cart
+							| Your Purchase
+		.panel-body
+			table.table.table-striped
+				thead
+					tr
+						th Item
+						th Quantity
+						th Price
+				tbody
+					each items
+						tr
+							td {{name}}
+							td {{quantity}}
+							td(style="text-align: right") {{money price}}
+		.panel-footer
+			.row.text-center
+				.col-xs-9
+					h4.text-right
+						| Total
+						string {{money total}}
